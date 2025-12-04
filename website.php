@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Games Wiki</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -47,7 +47,7 @@
 </nav>
 <table class="table table-striped">
 <div class="container mt-4">
-  <h2 class="mb-3 text-center">Welcome to my games table</h2>
+  <h2 class="mb-3 text-center">Games Table</h2>
 
 	<?php
  include("db.php");
@@ -66,4 +66,3 @@ $results = mysqli_query($mysqli, $sql);
 </table>
   </body>
 </html>
-
