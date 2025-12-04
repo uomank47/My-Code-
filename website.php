@@ -50,6 +50,7 @@
     </thead>
 
     <tbody>
+	<!-- PHP AND DATABASE CONTENT  -->
       <?php
         include("db.php");
         $sql = "SELECT * FROM videogames ORDER BY released_date";
@@ -60,6 +61,8 @@
         <tr>
           <td><?= $a_row['game_name'] ?></td>
           <td><?= $a_row['rating'] ?></td>
+		<td><a class="btn btn-outline-danger" href="delete-games.php?id=<?= $a_row['game_id'] ?>" role="button">Delete</a></td>
+
         </tr>
       <?php endwhile; ?>
     </tbody>
@@ -119,4 +122,3 @@
 
 </body>
 </html>
-
