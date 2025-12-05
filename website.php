@@ -1,4 +1,4 @@
-<!doctype html>
+!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -27,10 +27,40 @@
           <a class="nav-link active" href="#">Home</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-success">Search</button>
-      </form>
+      </head>
+<body>
+<div class="container">
+<h1>Game search</h1>
+<form class="row g-3">
+<div class="col-auto">
+<input type="text" class="form-control" id="searchBox" placeholder="Keywords">
+</div>
+</form>
+<p id="results"></p>
+</div>
+</body>
+</html>
+<script>
+// We "listen" for key pressed in our search box
+document.getElementById("searchBox").addEventListener("keyup", doSearch);
+// Function called when searching
+function doSearch() {
+// Get keyword from search box
+keywords = document.getElementById("searchBox").value;
+// Call server script, passing our keyword
+ fetch('https://mi-linux.wlv.ac.uk/~2343721/ajax.php?search=' + encodeURIComponent(keywords))
+// Convert response string to json object
+.then(response => response.json())
+.then(response => {
+// Clear result box
+document.getElementById("results").innerHTML = '';
+// Loop through data and add to result box
+response.forEach(game => {
+document.getElementById("results").append(game.game_name + ' ');
+});
+});
+}
+</script>
     </div>
   </div>
 </nav>
@@ -121,4 +151,8 @@
 </div>
 
 </body>
+
 </html>
+
+
+
