@@ -194,7 +194,7 @@ document.getElementById("results").append(game.game_name + ' ');
           <button type="submit" class="btn btn-primary">update Game</button>
         </div>
       </form>
-
+		
     </div>
   </div>
 </div>
@@ -202,6 +202,7 @@ document.getElementById("results").append(game.game_name + ' ');
 </body>
 
 </html>
+
 
 
 
