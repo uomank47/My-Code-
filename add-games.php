@@ -1,3 +1,4 @@
+
 <?php
 // Read values from the form
 $game_name = $_POST['GameName'];
