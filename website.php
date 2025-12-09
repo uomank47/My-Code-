@@ -1,4 +1,5 @@
-!doctype html>
+
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -149,10 +150,59 @@ document.getElementById("results").append(game.game_name + ' ');
     </div>
   </div>
 </div>
+<!-- ADD GAME BUTTON -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateGameModal">
+    update Game
+  </button>
+
+<div class="modal fade" id="updateGameModal" tabindex="-1" aria-labelledby="updateGameModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="updateGameModalLabel">update Game</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form action="update-game.php" method="post">
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label class="col-form-label">Game Name:</label>
+            <input type="text" class="form-control" name="GameName" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="col-form-label">Description:</label>
+            <textarea class="form-control" name="GameDescription" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="col-form-label">Rating:</label>
+            <input type="number" class="form-control" name="rating" min="0" max="10" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="col-form-label">Release Date:</label>
+            <input type="date" class="form-control" name="release_date" required>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">update Game</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
 
 </body>
 
 </html>
+
 
 
 
